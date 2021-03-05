@@ -1,0 +1,32 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://xmlns.oracle.com/oxp/service/PublicReportService">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <pub:runReport>
+      <pub:reportRequest>
+        <pub:attributeLocale>en-US</pub:attributeLocale>
+        <pub:attributeTemplate>Default</pub:attributeTemplate>
+        <pub:attributeFormat>xml</pub:attributeFormat>
+        <pub:parameterNameValues>
+          <!--Zero or more repetitions:-->
+          <pub:item>
+            <pub:name>p_last_update_date_f</pub:name>
+            <pub:dataType>DATETIME</pub:dataType>
+            <pub:values>
+              <pub:item>{0}</pub:item>
+            </pub:values>
+          </pub:item>
+          <pub:item>
+            <pub:name>p_last_update_date_t</pub:name>
+            <pub:dataType>DATETIME</pub:dataType>
+            <pub:values>
+              <pub:item>{1}</pub:item>
+            </pub:values>
+          </pub:item>
+        </pub:parameterNameValues>
+        <pub:reportAbsolutePath>/Custom/ISU/AR/AR INTERFACE.xdo</pub:reportAbsolutePath>
+      </pub:reportRequest>
+      <pub:userID>FIN_IMPL</pub:userID>
+      <pub:password>Ibiden!619834</pub:password>
+    </pub:runReport>
+  </soapenv:Body>
+</soapenv:Envelope>
